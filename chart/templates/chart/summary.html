@@ -1,0 +1,29 @@
+{% extends 'chart/base.html' %}
+
+{% block content %}
+
+<div>
+    <a button type="button" class="btn btn-outline-primary" href = "{% url 'summary' %}">Summary</button> </a>
+    <a button type="button" class="btn btn-outline-secondary" href = "{% url 'pie' %}" >Pie Chart</button> </a>
+    <a button type="button" class="btn btn-outline-secondary" href = "{% url 'bar' %}">Bar Chart</button></a>
+</div>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+
+      <h5 class="card-title">Total Population</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{sum}}</h6>
+     
+    </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+
+      <h5 class="card-title">Number of City</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{count}}</h6>
+     
+    </div>
+</div>
+
+{% endblock %}
